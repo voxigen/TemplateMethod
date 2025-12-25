@@ -11,6 +11,11 @@
 
             Beverage coffee = new Coffee();
             coffee.PrepareRecipe();
+
+            Console.WriteLine();
+
+            Beverage cocktail = new Cocktail();
+            cocktail.PrepareRecipe();
         }
     }
 }

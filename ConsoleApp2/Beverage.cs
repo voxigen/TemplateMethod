@@ -14,7 +14,10 @@ namespace ConsoleApp2
             BoilWater();
             Brew();
             PourInCup();
-            AddCondiments();
+            if (CustomerWantsCondiments())
+            {
+                AddCondiments();
+            }
         }
 
         protected abstract void Brew();
@@ -30,5 +33,11 @@ namespace ConsoleApp2
         {
             Console.WriteLine("Напиток налит в чашку");
         }
+
+        protected virtual bool CustomerWantsCondiments()
+        {
+            return true;
+        }
     }
 }
+
